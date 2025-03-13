@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
 public class Run : MonoBehaviour
 {
     private bool isMoving = false;
     private Vector3 target;
-    public float speed = 200f;
+    private float speed = 20f;
 
     void Update()
     {
@@ -19,7 +16,7 @@ public class Run : MonoBehaviour
         {
             Move();
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonUp(0))
         {
             isMoving = false;
         }
