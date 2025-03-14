@@ -13,10 +13,10 @@ public class ShootingScript : MonoBehaviour
 
     void Shoot()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.forward);
         if (hit)
         {
-
+            Debug.Log("Hit " + hit.collider.gameObject);
         }
     }
 }
